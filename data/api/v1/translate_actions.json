@@ -664,7 +664,7 @@
     "summary": "List your managed organizations"
   },
   "CreateChildOrg": {
-    "description": "Create a child organization.\n\nThis endpoint requires the\n[multi-organization account](https://docs.datadoghq.com/account_management/multi_organization/)\nfeature and must be enabled by\n[contacting support](https://docs.datadoghq.com/help/).\n\nOnce a new child organization is created, you can interact with it\nby using the `org.public_id`, `pi_key.key`, and\n`application_key.hash` provided in the response.",
+    "description": "Create a child organization.\n\nThis endpoint requires the\n[multi-organization account](https://docs.datadoghq.com/account_management/multi_organization/)\nfeature and must be enabled by\n[contacting support](https://docs.datadoghq.com/help/).\n\nOnce a new child organization is created, you can interact with it\nby using the `org.public_id`, `api_key.key`, and\n`application_key.hash` provided in the response.",
     "summary": "Create a child organization",
     "request_description": "Organization object that needs to be created",
     "request_schema_description": "Object describing an organization to create."
@@ -767,6 +767,10 @@
   "GetSLOHistory": {
     "description": "Get a specific SLO’s history, regardless of its SLO type.\n\nThe detailed history data is structured according to the source data type.\nFor example, metric data is included for event SLOs that use\nthe metric source, and monitor SLO types include the monitor transition history.\n\n**Note:** There are different response formats for event based and time based SLOs.\nExamples of both are shown.",
     "summary": "Get an SLO's history"
+  },
+  "GetBatch": {
+    "description": "Get a batch's updated details.",
+    "summary": "Get details of batch"
   },
   "ListLocations": {
     "description": "Get the list of public and private locations available for Synthetic\ntests. No arguments required.",
